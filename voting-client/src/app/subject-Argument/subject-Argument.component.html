@@ -1,0 +1,44 @@
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 ml-auto mr-auto">
+                <div class="page-categories">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">
+                            {{subject.title}}
+                            </h2>
+                            <p>{{subject.description}}
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header row">
+                            <h2 class="col-md-9">Subject Arguments</h2>
+                            <button class="btn btn-outline-primary waves-effect" (click)="editSubject()"
+                                    style="float:right">Add Argument</button>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"><strong>Description</strong></th>
+                                        <th scope="col"><strong>Created On</strong></th>
+                                        <th scope="col"><strong>View</strong></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let argument of subject.subjectArguments">
+                                        <td>{{argument.argument}}</td>
+                                        <td>{{argument.createDate}}</td>
+                                        <td><a class="btn btn-sm btn-outline-primary waves-effect"
+                                               ><i class="fa fa-eye">&nbsp;</i></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

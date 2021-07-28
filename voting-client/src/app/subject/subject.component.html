@@ -1,0 +1,39 @@
+<div class="content">
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 ml-auto mr-auto">
+                    <div class="page-categories">
+                        <div class="card">
+                            <div class="card-header row">
+                                <h2 class="col-md-10">Subject</h2>
+                                <button class="btn btn-outline-primary waves-effect" (click)="addSubject()"
+                                        style="float:right">Add Subject</button>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"><strong>Title</strong></th>
+                                            <th scope="col"><strong>Description</strong></th>
+                                            <th scope="col"><strong>Create On</strong></th>
+                                            <th scope="col"><strong>View</strong></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let subject of subject">
+                                            <td>{{subject.title}}</td>
+                                            <td>{{subject.description}}</td>
+                                            <td>{{subject.createDate}}</td>
+                                            <td><a class="btn btn-sm btn-outline-primary waves-effect" (click)="viewArgument(subject)"><i class="fa fa-eye"></i></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

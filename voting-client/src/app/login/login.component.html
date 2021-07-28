@@ -1,0 +1,84 @@
+<div class="wrapper wrapper-full-page">
+    <div class="page-header">
+      <!--   you can change the color of the filter page using: data-color="blue | purple | green | orange | red | rose " -->
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-8 ml-auto mr-auto">
+            <form #loginForm="ngForm" class="needs-validation" novalidate>
+              <div class="card card-login">
+                <div class="card-header text-center">
+                  <h3 class="card-title">Login</h3>
+                </div>
+                <div class="card-body ">
+                  <p class="card-description text-center">Welcome to Voting Application</p>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="EmailorPhone" class="bmd-label-floating">Email
+                        </label>
+                        <input type="text" pattern="^([0-9]{10})|([A-Za-z0-9._%\+\-]+@[a-zA-Z0-9.\-]+\.[a-z]{2,3})$"
+                          class="form-control" [(ngModel)]="email" name="username" id="emailorPhone" required>
+                        <div id="EmailInvalid" class="invalid-feedback">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="password" class="bmd-label-floating">Password
+                        </label>
+                        <div id="show_hide_password">
+                          <input class="form-control"  [(ngModel)]="password" type="password" name="Password"
+                            required>
+                          <div class="input-group-addon">
+                            <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+                          </div>
+                          <div class="invalid-feedback">
+                            Password Incorrect
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 form-group bmd-form-group">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="rememberCheck">
+                        <label class="form-check-label" for="rememberCheck">
+                          Remember me
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 text-righ form-group">
+                      <a routerLink="/forgot-password">Forgot Password?</a>
+                    </div>
+                  </div>
+                  <button type="submit" (click)="Login()" class="btn btn-warning full_width">Login</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <nav class="float-center">
+            <ul>
+              <li>
+                <a href="#">
+                  Magis Capital
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="copyright float-center">
+            &copy;
+            <script>
+              document.write(new Date().getFullYear())
+            </script> Voting Application
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
